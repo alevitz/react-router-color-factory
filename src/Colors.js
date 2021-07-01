@@ -2,7 +2,6 @@
 import {Link} from 'react-router-dom';
 
 function Colors({colors}) {
-console.log(colors);
 
   let chosenColors = colors.map(color => {
     return(

@@ -6,16 +6,16 @@ function NewColor({addColor}) {
   const history = useHistory();
   const INITIAL_STATE = {
     name: "",
-    value: ""
+    value: "#ffffff"
   }
 
   const [formData, setFormData] = useState({
     name: "",
-    value: ""
+    value: "#ffffff"
   });
 
   const handleSubmit = evt => {
-    console.log(formData)
+
     evt.preventDefault();
     addColor(formData);
     setFormData(INITIAL_STATE);

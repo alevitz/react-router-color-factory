@@ -1,18 +1,19 @@
 
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 function Color({color}) {
-  console.log(color)
+
+  if (!color) return <Redirect to="/colors"/>
 
   const colorStyle = {
     backgroundColor: color.value,
     height: "100vh"
   }
 
+
   return (
     <div style={colorStyle} className="Color">
-    {color.name}
-    {color.value}
+    <div>This is {color.name}.  Isn't it beautiful?</div>
     <p>
     <Link to="/colors">Go Back</Link>  
     </p>
