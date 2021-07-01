@@ -1,10 +1,21 @@
 
+import {Link} from "react-router-dom";
 
+function Color({color}) {
+  console.log(color)
 
-function Color() {
+  const colorStyle = {
+    backgroundColor: color.value,
+    height: "100vh"
+  }
+
   return (
-    <div className="Color">
-
+    <div style={colorStyle} className="Color">
+    {color.name}
+    {color.value}
+    <p>
+    <Link to="/colors">Go Back</Link>  
+    </p>
     </div>
   );
 }
